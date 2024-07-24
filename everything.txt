@@ -1,0 +1,52 @@
+BasicDataStructures->strings->Leetcode:1760 & maximum-tastiness-of-candy-bag
+LeetCode: 2517
+
+Binary Search:
+Let's say we have to search a range from 1, 25
+we will write a loop which runs like this:
+while(start < end) {
+  int mid = start + (end - start) / 2;
+  if (check(mid)) {
+    // search right
+  } else {
+    // search left
+  }
+}
+what should be the initial value of start? let's say 1
+what should be the initial value of end? let's say 25
+
+in this scenario
+start = 1; end = 25;
+mid = 1 + (25 - 1) / 2 = 13
+
+check(mid) == true;
+searching right:
+for searching right we can say
+start = mid; or start = mid + 1;
+
+if we choose: start = mid;
+mid value will be searched twice and in scenarios like:
+start = 8; end = 9;
+mid = 8 + (9 - 8) / 2 = 8;
+so in range 8, 9 it will keep repeating so we should make start as:
+start = mid + 1;
+
+if we choose: start = mid + 1;
+
+check(mid) == false;
+searching left:
+for searching left we can say
+end = mid; or end = mid - 1;
+
+if we choose: end = mid - 1;
+the value mid - 1 will go into check to be evaluated. So it will be skipped.
+
+so we can only choose end = mid; in order to search left. if we are calculating mid as:
+mid = start + ((end - start) + 1) / 2;
+then for searching left:
+end = mid - 1;
+
+1. Stock span problem.
+2. Max area under histogram.
+3. Rainwater trapping problem.
+Based on next greater element.

@@ -1,0 +1,48 @@
+Recap:
+  Toggle the bulbs: [1, 0, 0, 1, 1, 0, ..., 0, 1, 0]
+  queries: [(l1, r1), (l2, r2), (l3, r3), (l4, r4)];
+
+Data Structures:
+  Programming languages
+    Non-sequential data types: int, float, double, boolean, characters.
+    Sequential data types:
+      Array -> Derived data types(sets, maps, stacks, queues...);
+
+Advanced Data types:
+  which are not readily available: tree.
+
+Agenda: We want to know everything about the arrays.
+
+Array: Sequence of non sequential data types.
+Array of characters: string;
+What can we do with a sequece?
+1. Sorting: Bring it to a certain order.
+2. Searching: find if x exists.
+3. Rotation.
+4. Two pointer.
+5. Sliding window.
+6. Prefix sum + Difference array. 
+
+1. Sorting:
+  1 4 3 2 5 6 8
+  1 2 3 4 5 6 8
+
+how to sort?
+  5 6 3 1 2
+  loop and bring the biggest element to last of array.
+  5 3 1 2 | 6
+  3 1 2 | 5 6
+  1 2 | 3 5 6
+  1 | 2 3 5 6
+  1 2 3 5 6
+bubble sort. O(n^2) max input size ~ 10^4;
+
+To make sorting more natural we need recursion.
+Recursion:
+  1. Base condition
+  2. Problem decomposition.
+  3. Recomposition(starts when base condition hits);
+
+fact(n) = n * fact(n - 1); fact(1) = fact(0) = 1;
+
+fib(n) = fib(n - 1) + fib(n - 2); fib(1) = fib(0) = 1

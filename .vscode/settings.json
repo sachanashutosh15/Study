@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "string": "cpp",
+    "limits": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "rope": "cpp",
+    "regex": "cpp"
+  }
+}

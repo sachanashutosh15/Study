@@ -1,0 +1,26 @@
+QuickSort:
+{ 2, 3, 0, 4, 1, 5, 2 }
+take last element as pivot
+i = 0; it will track the element with which smaller element will be swapped.
+j = 0; it tell us the element which will be compared with pivot element.
+if arr[j] is < pivot swap arr[j] and arr[i];
+i = 0, j = 0
+arr[j] is not < pivot
+i = 0, j = 1
+arr[j] = 3 is not < pivot
+i = 0, j = 2
+arr[j] = 0 < pivot
+swap arr[i] and arr[j];
+i++, j++;
+{ 0, 3, 2, 4, 1, 5, 2 }
+
+Question: 2n elements half positive half negative, pivot element 0, and partition.
+Question: 2n elements half even half odd, if arr[j] % 2 == 0; swap arr[i], arr[j]
+
+=> Whereever there is an array of elements which needs to be grouped based on some rule.
+
+Question: {5, 2, 0, 3, 0, 2, 1, 0, 5, 4, 0 } push zeros to the end.
+
+Question: Dutch national flag. 
+{ 0, 1, 2, 0, 1, 1, 2, 1, 0, 1, 1, 2 }
+{ 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2 }

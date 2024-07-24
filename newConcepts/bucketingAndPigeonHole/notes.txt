@@ -1,0 +1,38 @@
+if we have a range of values like { 10, 4, 12, 2, 6, 8 }
+we can also sort them in O(n)
+here is how:
+just look at the range: 12 - 2 = 10
+size of data = 6
+bucket size is just fancy name for range of segments of sections of whole range
+0--2--4--6--8--10--12
+
+number of buckets also we know we need 6 buckets
+[ , , , , , ]
+now look at 10 where will 10 go?
+(10(current number) - 2(minimum number)) / 2(range/bucketsize) = 4th index;
+[ , , , , 10, ]
+now look at 4
+(4 - 2) / 2 = 1
+[ , 4, , , 10, ]
+now 12
+(12 - 2) / 2 = 5
+[ , 4, , , 10, 12]
+now 2
+(2 - 2) / 2 = 0
+[2, 4, , , 10, 12]
+now 6
+(6 - 2) / 2
+[2, 4, 6, , 10, 12]
+now 8
+[2, 4, 6, 8, 10, 12]
+
+
+
+we can create some empty locations and the place the values at their correct positions.
+in this case this is easy to see that we will need only 6 empty location.
+But in more complex scenarios like {8, 16, 7, 2, 10, 5}
+now the range is = 16 - 2 = 14
+size of data is = 6
+size of bucket = 14 / (6 - 1) = 2
+number of buckets = 14 / 2 + 1 = 8
+so 2 buckets will remain empty at the end.
